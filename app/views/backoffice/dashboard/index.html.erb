@@ -1,9 +1,11 @@
 <h1>Painel de Controle</h1>
 <p>Lista de usuários</p>
 
+<%= link_to  "Cadastrar novo Usuário", new_backoffice_user_path %>
 <% @users.each do |user| %>
     <p>
         <%= user.email %>
             <%= link_to  "Excluir", backoffice_user_path(user), method: :delete %>
+
     </p>
     <% end %>

@@ -1,2 +1,20 @@
-<h1>Backoffice::Users#new</h1>
-<p>Find me in app/views/backoffice/users/new.html.erb</p>
+<p><strong>Cadastro de Usuário<strong></p>
+
+	<%= form_for([:backoffice, @user]) do |f| %>
+
+	<div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "form-control",  placeholder: "exemplo@exemplo.com" %>
+    <%= f.label :password %>
+    <%= f.text_field :password, class: "form-control",  placeholder: "123456" %>
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation, class: "form-control",  placeholder: "123456" %>
+    <%= f.submit "Enviar dados", class: "btn btn-large btn-primary" %><br />
+
+  </div>
+
+<% end %>
+
+
+
+
